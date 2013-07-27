@@ -1,0 +1,51 @@
+!!! 5
+html(lang="en")
+	head
+		title AZ GeoMap
+		meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+		meta(name="apple-mobile-web-app-capable", content="yes")
+		meta(name="apple-mobile-web-app-status-bar-style", content="black")
+		link(rel="apple-touch-icon", href="style/images/azgs.png")
+		link(rel="apple-touch-startup-image", href="style/images/azgs-splash.png")
+		link(rel="stylesheet", type="text/css", href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css")
+		link(rel="stylesheet", type="text/css", href="style/leaflet.css")
+		link(rel="stylesheet/less", type="text/css", href="style/index.less")
+		
+		script(type="application/javascript", src="http://code.jquery.com/jquery-1.7.1.min.js")
+		script(type="application/javascript", src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js")
+		script(type="application/javascript", src="js/leaflet.js")
+		script(type="application/javascript", src="js/less.js")
+		script(type="application/javascript", src="js/map.js")
+	body
+		#map-page(data-role="page")
+			#map-header(data-role="header")
+				h1 AZ Geo Map
+				a(href="#config-page", data-role="button", data-icon="gear", data-iconpos="notext", data-rel="dialog")
+				a(href="#info-page", data-role="button", data-icon="info", data-iconpos="notext", data-rel="dialog")
+				#map-navbar(data-role="navbar", data-iconpos="left")
+					ul
+						li#map-legend
+							a(href="#", data-icon="grid") Legend
+						li#map-id
+							a(href="#", data-icon="search") Identify					
+						li#map-locate							
+							a(href="#", data-icon="home") Location
+			#map-content(data-role="content", style="padding: 0px;")
+				#map
+		#info-page(data-role="page")
+			#info-header(data-role="header")
+				h1 Information				
+			#info-content(data-role="content")
+				p Hello information!
+		#config-page(data-role="page")
+			#config-header(data-role="header")
+				h1 Configuration
+			#config-content(data-role="content")
+				p Hello Configuration!
+		#legend-page(data-role="page")
+			#legend-header(data-role="header")
+				h1 Map Units
+				a(href="#map-page", data-role="button", data-icon="delete", data-iconpos="notext")
+			#legend-content(data-role="content")
+			
+		
